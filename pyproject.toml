@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "lumilib"
-version = "1.0.0"
+version = "1.0.1"
 description = "算法开发常用工具集合"
 readme = "readme.md"
 requires-python = ">=3.8"
@@ -17,25 +17,16 @@ dependencies = [
   "pydantic>=2.0",
   "loguru>=0.7.0",
   "numpy>=1.21.0",
-]
-
-[project.urls]
-Homepage = "https://github.com/finks/lumilib"
-Repository = "https://github.com/finks/lumilib"
-
-[project.optional-dependencies]
-full = [
   "redis>=5.0.0",
   "pymongo>=4.0.0",
   "faiss-cpu>=1.8.0",
   "lmdb>=1.4.0",
   "chromadb>=0.4.0",
 ]
-mongo = ["pymongo>=4.0.0"]
-faiss = ["faiss-cpu>=1.8.0"]
-lmdb = ["lmdb>=1.4.0"]
-redis = ["redis>=5.0.0"]
-chroma = ["chromadb>=0.4.0"]
+
+[project.urls]
+Homepage = "https://github.com/finks/lumilib"
+Repository = "https://github.com/finks/lumilib"
 
 [tool.setuptools.packages.find]
 where = ["."]
