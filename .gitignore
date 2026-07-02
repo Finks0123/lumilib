@@ -1,0 +1,27 @@
+# IDE相关---------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+# 环境-------------------------------
+env/
+venv/
+.env
+.env.local
+.env.*.local
+# my ignore --------------------------
+*.log
+logs/
+_bck
+test
+logs
+build
+dist
+
+lumilib.egg-info

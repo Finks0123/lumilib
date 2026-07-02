@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lumilib"
+version = "1.0.0"
+description = "算法开发常用工具集合"
+readme = "readme.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "Finks", email = "finks@example.com" }
+]
+license = {text = "MIT"}
+keywords = ["database", "vector-database", "FAISS", "MongoDB", "Redis", "SQLite", "LMDB", "Chroma"]
+dependencies = [
+  "pydantic>=2.0",
+  "loguru>=0.7.0",
+  "numpy>=1.21.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/finks/lumilib"
+Repository = "https://github.com/finks/lumilib"
+
+[project.optional-dependencies]
+full = [
+  "redis>=5.0.0",
+  "pymongo>=4.0.0",
+  "faiss-cpu>=1.8.0",
+  "lmdb>=1.4.0",
+  "chromadb>=0.4.0",
+]
+mongo = ["pymongo>=4.0.0"]
+faiss = ["faiss-cpu>=1.8.0"]
+lmdb = ["lmdb>=1.4.0"]
+redis = ["redis>=5.0.0"]
+chroma = ["chromadb>=0.4.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lumilib*"]

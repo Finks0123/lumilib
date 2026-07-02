@@ -1,0 +1,11 @@
+include readme.md
+include pyproject.toml
+include setup.py
+
+recursive-include lumilib *.py
+recursive-exclude lumilib __pycache__
+recursive-exclude lumilib *.pyc
+recursive-exclude lumilib *.pyo
+
+exclude test/*
+exclude my_proxy/*

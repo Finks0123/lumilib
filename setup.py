@@ -1,0 +1,50 @@
+# -*- coding: utf-8 -*-
+from setuptools import setup, find_packages
+
+setup(
+    name='lumilib',
+    version='1.0.0',
+    description='算法开发常用工具集合',
+    long_description=open('readme.md', encoding='utf-8').read(),
+    long_description_content_type='text/markdown',
+    author='Finks',
+    author_email='finks@example.com',
+    url='https://github.com/finks/lumilib',
+    license='MIT',
+    packages=find_packages(),
+    include_package_data=True,
+    python_requires='>=3.8',
+    install_requires=[
+        'pydantic>=2.0',
+        'loguru>=0.7.0',
+        'numpy>=1.21.0',
+    ],
+    extras_require={
+        'full': [
+            'redis>=5.0.0',
+            'pymongo>=4.0.0',
+            'faiss-cpu>=1.8.0',
+            'lmdb>=1.4.0',
+            'chromadb>=0.4.0',
+        ],
+        'mongo': ['pymongo>=4.0.0'],
+        'faiss': ['faiss-cpu>=1.8.0'],
+        'lmdb': ['lmdb>=1.4.0'],
+        'redis': ['redis>=5.0.0'],
+        'chroma': ['chromadb>=0.4.0'],
+    },
+    keywords=['database', 'vector-database', 'FAISS', 'MongoDB', 'Redis', 'SQLite', 'LMDB', 'Chroma'],
+    classifiers=[
+        'Development Status :: 4 - Beta',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Operating System :: OS Independent',
+        'Topic :: Database',
+        'Topic :: Scientific/Engineering :: Artificial Intelligence',
+    ],
+)
